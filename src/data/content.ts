@@ -72,6 +72,11 @@ export const BRAND_INFO = {
     heading: "Find NOVO on Fiverr",
     text: "NOVO WRITING HUB is now available on Fiverr for digital services and web development.",
     profileUrlPlaceholder: "https://www.fiverr.com/novowritinghub"
+  },
+
+  instagram: {
+    username: "@novo_writing_hub",
+    profileUrl: "https://www.instagram.com/novo_writing_hub"
   }
 };
 

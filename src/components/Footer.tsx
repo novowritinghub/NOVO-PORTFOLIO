@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, ExternalLink, Shield, FileText, Phone, MessageCircle, Star } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Shield, FileText, Phone, MessageCircle, Star, Instagram } from 'lucide-react';
 import { BRAND_INFO, SERVICES_DATA } from '../data/content';
 
 export default function Footer() {
@@ -118,7 +118,7 @@ export default function Footer() {
                 </span>
               </div>
 
-              {/* Google Reviews Link */}
+              {/* Official Platform Buttons */}
               <div className="pt-2 flex flex-col gap-1.5">
                 <a
                   href="https://g.page/r/CX-rN80lscTGEBM/review"
@@ -129,6 +129,17 @@ export default function Footer() {
                   <Star className="w-3.5 h-3.5 text-yellow-600 fill-yellow-500" />
                   <span>Google Reviews</span>
                   <ExternalLink className="w-3 h-3 text-amber-700 ml-auto" />
+                </a>
+
+                <a
+                  href={BRAND_INFO.instagram.profileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-900 border border-rose-500/30 transition-colors inline-flex items-center gap-1.5 font-mono text-[11px] font-bold"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-rose-600" />
+                  <span>Instagram: {BRAND_INFO.instagram.username}</span>
+                  <ExternalLink className="w-3 h-3 text-rose-700 ml-auto" />
                 </a>
 
                 <a

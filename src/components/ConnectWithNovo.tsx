@@ -1,4 +1,4 @@
-import { Star, MessageCircle, Mail, ExternalLink, Globe, Sparkles } from 'lucide-react';
+import { Star, MessageCircle, Mail, ExternalLink, Globe, Sparkles, Instagram } from 'lucide-react';
 import { BRAND_INFO } from '../data/content';
 
 export default function ConnectWithNovo() {
@@ -40,6 +40,18 @@ export default function ConnectWithNovo() {
       btnText: "Chat on WhatsApp"
     },
     {
+      name: "Instagram",
+      label: "Official Instagram",
+      description: "Follow NOVO WRITING HUB (@novo_writing_hub) for updates & work showcases.",
+      url: BRAND_INFO.instagram.profileUrl,
+      icon: <Instagram className="w-6 h-6 text-rose-600" />,
+      badge: "Social Profile",
+      iconBg: "bg-rose-500/10 border-rose-500/20",
+      badgeStyle: "bg-rose-500/10 text-rose-900 border-rose-500/30",
+      accentBorder: "hover:border-rose-500/50",
+      btnText: "Follow on Instagram"
+    },
+    {
       name: "Email",
       label: "Official Email",
       description: "Send direct project briefs & documentation enquiries to novowritinghub@gmail.com.",
@@ -75,7 +87,7 @@ export default function ConnectWithNovo() {
         </div>
 
         {/* Platform Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {platforms.map((platform) => (
             <a
               key={platform.name}
