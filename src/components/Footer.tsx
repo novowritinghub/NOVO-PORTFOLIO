@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, ExternalLink, Shield, FileText, Phone, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Shield, FileText, Phone, MessageCircle, Star } from 'lucide-react';
 import { BRAND_INFO, SERVICES_DATA } from '../data/content';
 
 export default function Footer() {
@@ -71,11 +71,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Official Contact Info & Fiverr */}
+          {/* Official Contact Info & Platforms */}
           <div className="space-y-4">
-            <h3 className="text-xs font-bold text-slate-900 tracking-wider uppercase font-mono">Contact Details</h3>
+            <h3 className="text-xs font-bold text-slate-900 tracking-wider uppercase font-mono">Contact & Platforms</h3>
             <div className="space-y-2.5 text-xs">
-              {/* Phone (Clickable) */}
+              {/* Phone */}
               <a
                 href={BRAND_INFO.contact.phoneLink}
                 className="flex items-center gap-2.5 text-slate-700 hover:text-amber-700 transition-colors group"
@@ -86,7 +86,7 @@ export default function Footer() {
                 </span>
               </a>
 
-              {/* WhatsApp (Clickable) */}
+              {/* WhatsApp */}
               <a
                 href={BRAND_INFO.contact.whatsappLink}
                 target="_blank"
@@ -99,14 +99,14 @@ export default function Footer() {
                 </span>
               </a>
 
-              {/* Email (Clickable) */}
+              {/* Email */}
               <a
-                href={BRAND_INFO.contact.emailLink}
+                href="mailto:novowritinghub@gmail.com"
                 className="flex items-center gap-2.5 text-slate-700 hover:text-amber-700 transition-colors group"
               >
                 <Mail className="w-4 h-4 text-amber-700 shrink-0" />
                 <span className="font-mono text-slate-800 group-hover:text-amber-700 text-[11px] font-medium">
-                  {BRAND_INFO.contact.email}
+                  novowritinghub@gmail.com
                 </span>
               </a>
 
@@ -118,16 +118,27 @@ export default function Footer() {
                 </span>
               </div>
 
-              {/* Fiverr Profile */}
-              <div className="pt-2">
+              {/* Google Reviews Link */}
+              <div className="pt-2 flex flex-col gap-1.5">
+                <a
+                  href="https://g.page/r/CX-rN80lscTGEBM/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-900 border border-amber-500/30 transition-colors inline-flex items-center gap-1.5 font-mono text-[11px] font-bold"
+                >
+                  <Star className="w-3.5 h-3.5 text-yellow-600 fill-yellow-500" />
+                  <span>Google Reviews</span>
+                  <ExternalLink className="w-3 h-3 text-amber-700 ml-auto" />
+                </a>
+
                 <a
                   href={BRAND_INFO.fiverr.profileUrlPlaceholder}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 border border-amber-500/30 transition-colors inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold"
+                  className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-amber-300 transition-colors inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold"
                 >
                   <span>Fiverr: {BRAND_INFO.fiverr.username}</span>
-                  <ExternalLink className="w-3 h-3 text-amber-700" />
+                  <ExternalLink className="w-3 h-3 text-amber-400 ml-auto" />
                 </a>
               </div>
             </div>

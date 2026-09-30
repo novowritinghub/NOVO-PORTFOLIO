@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
+import ConnectWithNovo from '../components/ConnectWithNovo';
 import { BRAND_INFO, SERVICES_DATA } from '../data/content';
 import { 
   Mail, MapPin, ExternalLink, Send, CheckCircle2, 
@@ -52,7 +53,7 @@ ${formData.details}
 Best regards,
 ${formData.name}`;
 
-  const mailtoUrl = `mailto:${BRAND_INFO.contact.email}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+  const mailtoUrl = `mailto:novowritinghub@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
   
   const whatsappText = `Hello Anand, I want to start a project with NOVO WRITING HUB.
 
@@ -81,7 +82,7 @@ Details: ${formData.details}`;
     <div className="min-h-screen pt-28 pb-20 bg-[#FAFAFA] text-slate-900">
       <SEOHead
         title="Contact NOVO WRITING HUB"
-        description="Contact Anand Krishnan at NOVO WRITING HUB in Thanjavur. Phone: 7540072112, Email: novowrirtinghub@gmail.com. Submit a project enquiry or hire on Fiverr."
+        description="Contact Anand Krishnan at NOVO WRITING HUB in Thanjavur. Phone: 7540072112, Email: novowritinghub@gmail.com. Submit a project enquiry, leave a Google Review, or hire on Fiverr."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -94,7 +95,7 @@ Details: ${formData.details}`;
             Contact <span className="text-gradient-gold">NOVO WRITING HUB</span>
           </h1>
           <p className="text-base text-slate-600 leading-relaxed">
-            Submit your enquiry below to immediately email or WhatsApp Anand Krishnan at <span className="font-mono font-semibold text-slate-900">{BRAND_INFO.contact.email}</span> / <span className="font-mono font-semibold text-slate-900">7540072112</span>.
+            Submit your enquiry below to immediately email or WhatsApp Anand Krishnan at <span className="font-mono font-semibold text-slate-900">novowritinghub@gmail.com</span> / <span className="font-mono font-semibold text-slate-900">7540072112</span>.
           </p>
         </div>
 
@@ -121,14 +122,14 @@ Details: ${formData.details}`;
                     </p>
                   </div>
 
-                  {/* Immediate Action Buttons for Guaranteed Delivery */}
+                  {/* Action Buttons */}
                   <div className="flex flex-col gap-3 pt-2 max-w-md mx-auto">
                     <a
                       href={mailtoUrl}
                       className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-600 text-slate-950 font-extrabold text-xs uppercase tracking-wider shadow-md hover:from-amber-400 hover:to-yellow-500 transition-all flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
-                      <span>Send Email to novowrirtinghub@gmail.com</span>
+                      <span>Send Email to novowritinghub@gmail.com</span>
                     </a>
 
                     <a
@@ -278,14 +279,13 @@ Details: ${formData.details}`;
             </div>
           </div>
 
-          {/* Contact Details & Fiverr Column */}
+          {/* Contact Details Column */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Direct Contact Cards */}
             <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-200 bg-white space-y-5 shadow-sm">
               <h2 className="text-xl font-bold text-slate-900">Direct Contact Details</h2>
 
               <div className="space-y-3.5 text-xs">
-                {/* Clickable Phone */}
+                {/* Phone */}
                 <a
                   href={BRAND_INFO.contact.phoneLink}
                   className="p-4 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-between group transition-colors block"
@@ -306,7 +306,7 @@ Details: ${formData.details}`;
                   </span>
                 </a>
 
-                {/* Clickable WhatsApp */}
+                {/* WhatsApp */}
                 <a
                   href={BRAND_INFO.contact.whatsappLink}
                   target="_blank"
@@ -329,9 +329,9 @@ Details: ${formData.details}`;
                   </span>
                 </a>
 
-                {/* Clickable Email */}
+                {/* Email */}
                 <a
-                  href={BRAND_INFO.contact.emailLink}
+                  href="mailto:novowritinghub@gmail.com"
                   className="p-4 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-between group transition-colors block"
                 >
                   <div className="flex items-center gap-3">
@@ -341,7 +341,7 @@ Details: ${formData.details}`;
                     <div>
                       <span className="text-slate-500 font-mono text-[11px] block">Email:</span>
                       <span className="font-mono text-slate-900 font-bold group-hover:text-amber-700 transition-colors text-xs">
-                        {BRAND_INFO.contact.email}
+                        novowritinghub@gmail.com
                       </span>
                     </div>
                   </div>
@@ -364,44 +364,11 @@ Details: ${formData.details}`;
                 </div>
               </div>
             </div>
-
-            {/* Dedicated Fiverr Section */}
-            <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-amber-500/30 bg-slate-50 space-y-4">
-              <span className="px-2.5 py-0.5 rounded text-[10px] font-mono bg-amber-500 text-slate-950 font-bold uppercase">
-                Fiverr Platform
-              </span>
-              <h2 className="text-xl font-bold text-slate-900">{BRAND_INFO.fiverr.heading}</h2>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {BRAND_INFO.fiverr.text}
-              </p>
-              
-              <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5 text-xs font-mono">
-                <div className="flex justify-between">
-                  <span className="text-slate-500">Seller:</span>
-                  <span className="text-slate-900 font-bold">{BRAND_INFO.fiverr.displayName}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-500">Username:</span>
-                  <span className="text-amber-700 font-bold">{BRAND_INFO.fiverr.username}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-500">Title:</span>
-                  <span className="text-slate-700">{BRAND_INFO.fiverr.title}</span>
-                </div>
-              </div>
-
-              <a
-                href={BRAND_INFO.fiverr.profileUrlPlaceholder}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-amber-400 transition-all shadow-md"
-              >
-                <span>View Fiverr Profile</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
           </div>
         </div>
+
+        {/* Connect With NOVO Section */}
+        <ConnectWithNovo />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import ServiceCard from '../components/ServiceCard';
 import ProjectCard from '../components/ProjectCard';
+import ConnectWithNovo from '../components/ConnectWithNovo';
 import { BRAND_INFO, SERVICES_DATA, PORTFOLIO_SAMPLES } from '../data/content';
 import { 
   ArrowRight, Sparkles, CheckCircle2, 
@@ -201,6 +202,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Connect With NOVO Section (Dark Navy & Electric Blue/Cyan Accents) */}
+      <ConnectWithNovo />
+
       {/* Subtle Home Page Contact CTA */}
       <section className="py-16 border-b border-slate-200/80 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,32 +233,6 @@ export default function Home() {
                 <span>WhatsApp Us</span>
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Fiverr Platform Section */}
-      <section className="py-16 border-b border-slate-200/80 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-panel p-8 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-50">
-            <div className="space-y-2 text-center md:text-left">
-              <span className="px-2.5 py-0.5 rounded text-[10px] font-mono bg-amber-500 text-slate-950 font-bold uppercase">
-                {BRAND_INFO.fiverr.heading}
-              </span>
-              <h3 className="text-xl font-bold text-slate-900">Order Via Fiverr Platform</h3>
-              <p className="text-xs text-slate-600 max-w-xl">
-                {BRAND_INFO.fiverr.text}
-              </p>
-            </div>
-            <a
-              href={BRAND_INFO.fiverr.profileUrlPlaceholder}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-amber-400 shadow-sm transition-all shrink-0"
-            >
-              <span>View Fiverr Profile</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
           </div>
         </div>
       </section>
