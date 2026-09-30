@@ -17,7 +17,7 @@ import Terms from './pages/Terms';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0F17] text-slate-100">
+    <div className="min-h-screen flex flex-col bg-[#FAFAFA] text-slate-900 font-['Plus_Jakarta_Sans',sans-serif]">
       {/* Scroll to top utility on route changes */}
       <ScrollToTop />
 
