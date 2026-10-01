@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import NovoChatbot from './components/NovoChatbot';
 
 // Page Components
 import Home from './pages/Home';
@@ -48,6 +49,9 @@ export default function App() {
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
+
+      {/* Floating Interactive Chatbot */}
+      <NovoChatbot />
 
       {/* Global Professional Footer */}
       <Footer />
